@@ -1,0 +1,111 @@
+
+
+/* Full-page animated background with black and gold gradient */
+.animated-background {
+  background: linear-gradient(45deg, #000000, #020202, #000000);
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header animation */
+header {
+  animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global heading style with pulsing animation */
+.heading {
+  color: #FFD700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Container for charts section */
+.charts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Individual chart box with border, shadow, and pop-in animation */
+.chart-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  animation: popIn 1s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Chart headings style */
+.chart-heading {
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Style for any additional text */
+.text-gold {
+  color: #FFD700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.spinner {
+  border: 6px solid rgba(255, 215, 0, 0.2);
+  border-top: 6px solid #FFD700;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
